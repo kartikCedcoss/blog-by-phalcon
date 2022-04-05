@@ -1,0 +1,30 @@
+<?php
+if ($blogs->count()>0){
+    ?>
+     <form method="POST" action="../blog/readblog"> 
+    <h2>All Blogs</h2>
+      <div class="container-fluid mt-1 mb-3">
+        <div class="row justify-content-center">
+         <?php foreach($blogs as $blog){ ?>
+      ' <div class="col-3 mt-4">
+          <div class="card" style="width: 15rem;" >
+        <img src="../public/img/6.jpeg" class="card-img-top" alt="...">
+        
+         <div class="card-body">
+        <h5 class="card-title"><i class="fa fa-person"></i><?php echo $blog->username;?></h5>
+        <p class="card-text"><?php echo $blog->title;?></p>
+        </div>
+        <div class="card-body">
+       <button  type="submit" class="card-link btn btn-outline-success border-0 mt-2 "  value="<?php echo $blog->blogid;  ?>" name="readblog" >Read More..</button>
+       </div>
+       </div>
+            </div>';
+<?php }?>
+        </div>
+    </div>
+     </form>
+      </div>
+
+    <?php
+}
+?>

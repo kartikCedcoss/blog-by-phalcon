@@ -1,0 +1,12 @@
+{
+    "name": "phalcon/app",
+    "description": "Phalcon application",
+    "autoload": {
+        "psr-4": {
+            "Phalcon\\App\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phalcon/devtools": "^4.2"
+    }
+}
